@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Streets</title>
+
+<head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.js"></script>
+    <link href="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.css" rel="stylesheet" />
+    <link href="/static/css/cloud_base.css?t=1632139393" rel="stylesheet" />
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+        <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img
+                src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+    </div>
+    <p><a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a
+            href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a></p>
+    <script>
+        // You can remove the following line if you don't need support for RTL (right-to-left) labels:
+        mapboxgl.setRTLTextPlugin('https://cdn.maptiler.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.2/mapbox-gl-rtl-text.js');
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'https://api.maptiler.com/maps/ddf56218-f4e5-4f80-9bfe-2b1a070382d2/style.json?key=6pRNjrAnj528l6UW8HBf',
+            center: [-74.01221, 40.70372],
+            zoom: 14.56,
+            hash: true
+        });
+        map.addControl(new mapboxgl.NavigationControl());
+    </script>
+</body>
+
+</html>
